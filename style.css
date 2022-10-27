@@ -18,7 +18,7 @@
 html{
     font-family: 'Inter', sans-serif;
     font-size: 62.5%;
-    max-width: 140rem;
+    max-width: 130rem;
     margin: 0 auto;
 }
 
@@ -39,14 +39,16 @@ header{
 main{
     padding-top: 3rem;
 }
-.hero-image{
-    width: 100%;
+.main-navigation a:hover{
+    color: var(--Soft-orange);
 }
 .hero-image img{
     width: 100%;
+    max-height: 27rem;
+    object-fit: cover;
 }
 .hero-text{
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
 }
 .hero-text h1{
     display: flex;
@@ -70,6 +72,7 @@ main{
     letter-spacing: 0.4rem;
     display: block;
     margin-top: 2rem;
+    margin-bottom: 3rem;
     transition: all 0.2s ease-in;
 }
 .btn-read:hover, .btn-read:active{
@@ -78,7 +81,7 @@ main{
 }
 .sidebar{
     background: #000;
-            padding: 2rem 1rem;
+            padding: 2rem;
             margin: 1rem 0 4rem;
 }
 .sidebar h2{
@@ -90,6 +93,10 @@ main{
     color: #fff;
     padding: 1rem 0;
     font-size: 2rem;
+}
+.sidebar h3:hover {
+        color: hsl(35, 77%, 62%);
+        cursor: pointer;
 }
 .sidebar p{
     color: hsl(235, 21%, 68%);
@@ -117,17 +124,25 @@ main{
     flex-basis: 30%;
 }
 .card-image img{
-    max-width: 100%;
+   width: 12rem;
+   object-fit: cover;
 }
 .card-description{
     color: var(--Dark-grayish-blue);
     line-height: 1.8rem;
     font-size: 1.1rem;
 }
+.card-description p{
+        font-size: 1.3rem;
+            line-height: 2.5rem;
+        }
+
 .card-description span{
+    display: block;
     font-size: 2.5rem;
     color: silver;
     font-weight: 700;
+    padding: 1rem 0;
 }
 .card-description h3{
     color: #000;
@@ -152,7 +167,7 @@ main{
     color: var(--Very-dark-blue);
     z-index: 15;
     padding: 5%;
-    animation: moveInLeft 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: moveInLeft 0.5s linear
 }
 .hide {
     display: none;
@@ -196,24 +211,17 @@ footer{
 }
 @keyframes moveInLeft {
     0%{
-        transform: translateX(100%);
+        transform: translateX(50%);
     }
     50%{
-        transform: translateX(-50%);
+        transform: translateX(-30%);
     }
     100%{
         transform: translateX(0%);
     }
 }
 
-@media screen and (min-width: 600px) {
-.mobile-hide{
-    display: block;
-}
-.desktop{
-    display: none;
-}
-}
+
 
 @media screen and (min-width: 900px) {
     .open{
@@ -247,13 +255,13 @@ footer{
     }
     .sidebar{
         margin: 0rem 0rem 0rem 2rem;
-        flex-basis: 30%;
+        flex-basis: 26%;
     }
     .sidebar p{
         font-size: 1.4rem;
     }
     .hero-main{
-        flex-basis: 70%;
+        flex-basis: 75%;
     }
     .hero-text{
         display: flex;
