@@ -44,7 +44,7 @@ main{
 }
 .hero-image img{
     width: 100%;
-    max-height: 27rem;
+    max-height: 30rem;
     object-fit: cover;
 }
 .hero-text{
@@ -203,11 +203,9 @@ main{
     font-size: 1.5rem;
 }
 footer{
-    position: fixed;
-    bottom: 0;
+    margin-top: 6rem;
     text-align: center;
-    left:50%;
-    transform: translateX(-50%);
+  
 }
 @keyframes moveInLeft {
     0%{
